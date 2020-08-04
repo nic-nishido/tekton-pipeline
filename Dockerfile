@@ -11,10 +11,13 @@ FROM adoptopenjdk/openjdk8-openj9 AS build-stage
 USER root
 RUN apt-get update
 RUN apt-get install -y unzip
-RUN sleep 10
+RUN sleep 5
 RUN apt remove maven
+RUN sleep 5
 RUN apt autoremove
+RUN sleep 5
 RUN dpkg --configure -a
+RUN sleep 5
 RUN apt-get install -y maven
 
 
