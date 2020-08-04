@@ -12,10 +12,8 @@ USER root
 RUN apt-get update
 RUN apt-get install -y unzip
 
-RUN dpkg -P maven
-RUN apt-get -f install
 RUN sleep 5
-RUN apt-get install -y maven
+RUN apt-get install -y --force-yes maven
 
 
 COPY . /project
