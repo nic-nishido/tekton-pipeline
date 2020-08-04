@@ -12,7 +12,7 @@ USER root
 RUN apt-get update
 RUN apt-get install -y unzip
 
-RUN sleep 5
+RUN sleep 3600
 RUN apt-get install -y maven3
 
 
