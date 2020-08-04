@@ -10,7 +10,7 @@ FROM adoptopenjdk/openjdk8-openj9 AS build-stage
 ###ADD
 USER root
 RUN apt-get update
-RUN apt-get install -y unzip
+RUN apt-get install -y unzip wget
 
 RUN sleep 5
 RUN wget https://ftp.riken.jp/net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
