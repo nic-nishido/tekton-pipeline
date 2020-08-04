@@ -4,8 +4,9 @@
 
 FROM adoptopenjdk/openjdk8-openj9 AS build-stage
 
-RUN apt-get update && \
-    apt-get install -y maven unzip
+#RUN apt-get update && \
+#    apt-get install -y maven unzip
+RUN  apt-get install -y maven unzip
 
 COPY . /project
 WORKDIR /project
