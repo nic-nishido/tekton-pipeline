@@ -9,7 +9,8 @@ FROM adoptopenjdk/openjdk8-openj9 AS build-stage
 
 ###ADD
 USER root
-RUN  apt-get install -y maven unzip
+RUN apt-get update
+RUN apt-get install -y maven unzip
 
 COPY . /project
 WORKDIR /project
