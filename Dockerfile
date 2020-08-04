@@ -12,8 +12,9 @@ USER root
 RUN apt-get update
 RUN apt-get install -y unzip
 
-RUN sleep 3600
-RUN apt-get install -y maven3
+RUN sleep 5
+RUN yum install -y maven
+#RUN apt-get install -y maven3
 
 
 COPY . /project
