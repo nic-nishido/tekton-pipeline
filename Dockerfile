@@ -13,7 +13,7 @@ RUN apt-get update
 RUN apt-get install -y unzip
 
 RUN sleep 5
-RUN apt-get install -y --force-yes maven
+RUN apt-get install -y maven3
 
 
 COPY . /project
