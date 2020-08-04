@@ -32,18 +32,11 @@ RUN mvn clean package
 
 RUN mkdir -p /config/apps && \
     mkdir -p /sharedlibs && \
-#    cp ./src/main/liberty/config/server.xml /config && \
-#    cp ./target/*.*ar /config/apps/ && \
-#    if [ ! -z "$(ls ./src/main/liberty/lib)" ]; then \
-#       cp ./src/main/liberty/lib/* /sharedlibs; \
-#    fi
-
-    cp ./target/*.*ar /opt/ol/wlp/templates/servers/defaultServer/dropins/ && \
+    cp ./src/main/liberty/config/server.xml /config && \
+    cp ./target/*.*ar /config/apps/ && \
     if [ ! -z "$(ls ./src/main/liberty/lib)" ]; then \
-        cp ./src/main/liberty/lib/* /sharedlibs; \
+       cp ./src/main/liberty/lib/* /sharedlibs; \
     fi
-
-
 
 FROM open-liberty:kernel-java8-openj9
 
