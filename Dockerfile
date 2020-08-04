@@ -12,6 +12,9 @@ USER root
 RUN apt-get update
 RUN apt-get install -y unzip
 RUN sleep 10
+RUN apt remove maven
+RUN apt autoremove
+RUN dpkg --configure -a
 RUN apt-get install -y maven
 
 
