@@ -15,7 +15,7 @@ RUN apt-get install -y unzip wget
 RUN sleep 5
 RUN wget https://ftp.riken.jp/net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
 RUN tar zxf apache-maven-3.6.3-bin.tar.gz
-RUN find ./ -name mvn
+#RUN find ./ -name mvn
 RUN echo $PATH
 ENV PATH ./apache-maven-3.6.3/bin:$PATH
 RUN echo $PATH
